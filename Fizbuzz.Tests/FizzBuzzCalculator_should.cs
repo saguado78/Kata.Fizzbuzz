@@ -5,6 +5,7 @@ namespace Fizbuzz.Tests
 {
     public class FizzBuzzCalculator_should
     {
+        public const string test_FIZZ="FIZZ";
         [Test]       
         public void return_the_same_number_by_default(){
             FizzBuzzCalculator calc=new FizzBuzzCalculator();
@@ -22,7 +23,7 @@ namespace Fizbuzz.Tests
 
             string res=calc.Calculate(input);
 
-            Assert.AreEqual("FIZZ",res,"Unexpected resutl");
+            Assert.AreEqual(test_FIZZ,res,"Unexpected resutl");
         }
     }
 }
