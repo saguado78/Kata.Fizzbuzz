@@ -12,7 +12,7 @@ namespace Fizbuzz.Tests
 
             string res=calc.Calculate(1);
 
-            Assert.AreEqual("1",res,"Unexpected resutl");
+            Assert.AreEqual("1",res,"Unexpected result");
         }
 
         [Test]
@@ -23,7 +23,18 @@ namespace Fizbuzz.Tests
 
             string res=calc.Calculate(input);
 
-            Assert.AreEqual(test_FIZZ,res,"Unexpected resutl");
+            Assert.AreEqual(test_FIZZ,res,"Unexpected result");
+        }
+
+        [Test]
+        [TestCase(5)]
+        [TestCase(10)]
+        public void return_BUZZ_when_divisible_by_5(int input){
+            FizzBuzzCalculator calc=new FizzBuzzCalculator();
+
+            string res=calc.Calculate(input);
+
+            Assert.AreEqual("BUZZ",res,"Unexpected result");
         }
     }
 }
