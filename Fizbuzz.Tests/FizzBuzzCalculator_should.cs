@@ -37,5 +37,16 @@ namespace Fizbuzz.Tests
 
             Assert.AreEqual(test_BUZZ,res,"Unexpected result");
         }
+
+        [Test]
+        [TestCase(15)]
+        [TestCase(30)]
+        public void return_FIZZBUZZ_when_divisible_by_3_and_5(int input){
+            FizzBuzzCalculator calc=new FizzBuzzCalculator();
+
+            string res=calc.Calculate(input);
+
+            Assert.AreEqual(test_FIZZ + test_BUZZ,res,"Unexpected result");
+        }
     }
 }
