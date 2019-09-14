@@ -6,7 +6,14 @@ namespace Fizbuzz.Logic
     {
         public string Calculate(int input)
         {
-            return input.ToString();
+            string res=string.Empty;
+            if(input % 3==0){
+                res="FIZZ";
+            }
+            else{
+                res=input.ToString();
+            }
+            return res;
         }
     }
 }
