@@ -4,7 +4,8 @@ namespace Fizbuzz.Logic
 {
     public class FizzBuzzCalculator
     {
-        public const string FIZZ="FIZZ";
+        private const string FIZZ="FIZZ";
+        private const string BUZZ="BUZZ";
         public string Calculate(int input)
         {
             string res=string.Empty;
@@ -12,7 +13,7 @@ namespace Fizbuzz.Logic
                 res=FIZZ;
             }
             else if(input % 5==0){
-                res="BUZZ";
+                res=BUZZ;
             }
             else{
                 res=input.ToString();
