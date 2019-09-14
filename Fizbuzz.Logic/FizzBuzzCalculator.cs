@@ -10,12 +10,12 @@ namespace Fizbuzz.Logic
         {
             string res=string.Empty;
             if(input % 3==0){
-                res=FIZZ;
+                res+=FIZZ;
             }
-            else if(input % 5==0){
-                res=BUZZ;
+            if(input % 5==0){
+                res+=BUZZ;
             }
-            else{
+            if(string.IsNullOrEmpty(res)){
                 res=input.ToString();
             }
             return res;
